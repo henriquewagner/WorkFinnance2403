@@ -1,0 +1,57 @@
+### Buscar todos os ID ATUALIZAR O BANCO
+GET http://localhost:3333/user/
+
+### Buscar EXTRATO GERAL DA CONTA COM ID ESPECIFICO
+GET http://localhost:3333/user/
+### Alterar CADASTRO DO USUARIO NO BANCO
+PUT  http://localhost:3333/user/alterar/
+content-type: application/json
+
+{
+   "name": "Henrique Bernard",
+    "address": "Santo Cristo/RS",
+    "zipCode": "98960-000",
+    "cpf": "123547179-97",
+    "saldo": 50,
+    "transacao":[]
+}
+
+### Inserir Informação DO USUARIO NO BANCO
+POST http://localhost:3333/user/
+content-type: application/json
+
+{
+    "name": "Henrique Bernard Wagner",
+    "address": "Santo Cristo",
+    "zipCode": "12345678-9",
+    "cpf": "123.123.123.12",
+    "saldo": 110,
+    "transacao":[]
+}
+
+### Deletar CLIENTE DO BANCO
+DELETE  http://localhost:3333/user/
+
+### SACAR
+PUT  http://localhost:3333/user/sacar/
+content-type: application/json
+
+{
+    "name": "Henrique",
+    "transacao":[{
+      "valor":12
+    }]
+}
+
+### DEPOSITAR
+PUT  http://localhost:3333/user/depositar/
+content-type: application/json
+
+{
+
+    "name": "Henrique",
+    "transacao":[{
+    "valor":500
+    }]
+}
+
